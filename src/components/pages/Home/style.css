@@ -1,0 +1,22 @@
+.bg {
+    background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.ctr {
+    width: 90vw !important;
+    margin-left: 10vw;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 100vh;
+}
+
+.jb {
+    height: 50vh;
+}
+
+.mini {
+    height: 42vh;
+}
