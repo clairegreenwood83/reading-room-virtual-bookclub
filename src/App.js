@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/navbar/sidebar'
 import Home from './components/pages/Home';
 
 function App() {
   return (
     <Router>
-      <div>
-        {/* <Navbar /> */}
+      <div className="App">
+        <Sidebar/>
         {/* Wrap Route elements in a Routes component */}
         <Routes>
           {/* Define routes using the Route component to render different page components at different paths */}
