@@ -6,15 +6,14 @@
 }
 
 .ctr {
-    width: 90vw !important;
-    margin-left: 10vw;
+    width: fit-content; 
     padding-left: 3rem;
     padding-right: 3rem;
-    height: 100vh;
+    height: 100vh; 
 }
 
 .jb {
-    height: 50vh;
+    height: 50vh; 
 }
 
 .mini {
