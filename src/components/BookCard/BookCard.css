@@ -1,7 +1,25 @@
 
 
 .book {
-    width: 20vw;
-    height: 30vh;
+    width: 15vw;
+    height: auto;
 }
+
+.button {
+    background-color: rgb(131, 5, 141);
+    border: none;
+    width: 8vw;
+    height: 3vh;
+    font-size: 1.3vh;
+    padding-top: 0.5vh;
+}
+
+.author {
+    font-size: 1vh;
+}
+
+.title {
+    font-size: 1.5vh;
+}
+
 

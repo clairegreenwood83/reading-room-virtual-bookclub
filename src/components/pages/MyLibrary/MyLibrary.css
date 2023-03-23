@@ -24,12 +24,3 @@ h3 {
     margin-top: 10vh;
     text-align: center;
 }
-
-.bookCard {
-    margin: 0 auto;
-    margin-bottom: 10vh;
-    margin-top: 5vh;
-    border-color: black;
-    min-width: 20rem;
-    margin: 20px;
-} 
