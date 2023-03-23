@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import "./MyLibrary.css"; 
 import BookCard from "../../BookCard/BookCard";
-import React, { useState } from "react";
 
 function MyLibrary() {
 const [currentlyReading, setCurrentlyReading] = useState([]);
@@ -31,18 +31,6 @@ return (
                 <BookCard book={book} />
                 </Col>
             ))}
-                <Col>
-                <BookCard >
-                </BookCard>
-                </Col>
-                <Col>
-                <BookCard >
-                </BookCard>
-                </Col>
-                <Col>
-                <BookCard >
-                </BookCard>
-                </Col>
         </Row>
         <Row className="favourites">
             <h3>Favourites</h3>
@@ -51,37 +39,14 @@ return (
                 <BookCard book={book} />
                 </Col>
             ))}
-                <Col>
-                <BookCard>
-                </BookCard >
-                </Col>
-                <Col>
-                <BookCard>
-                </BookCard >
-                </Col>
-                <Col>
-                <BookCard>
-                </BookCard >
-                </Col>
         </Row>
         <Row className="previous">
             <h3>Previously Read</h3>
             {previouslyRead.map((book) => (
                 <Col>
-                <BookCard book={book} />
+                <BookCard className="bookCard" book={book} />
                 </Col>
             ))}
-                <Col>
-                <BookCard>
-                </BookCard>
-                </Col>
-                <Col>
-                <BookCard>
-                </BookCard>
-                </Col><Col>
-                <BookCard>
-                </BookCard>
-                </Col>
         </Row>
       </Container>
     </div>

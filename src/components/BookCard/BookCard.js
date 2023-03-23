@@ -4,7 +4,7 @@ import "./BookCard.css";
 
 function BookCard(props) {
 
-    const { id, coverImage, title, author, removeBook } = props;
+    const { id, image, title, author, removeBook } = props.book;
    
     const handleRemove = () => {
         removeBook(id);
@@ -12,10 +12,10 @@ function BookCard(props) {
 
     return (
             <Card className="book" key={id}>
-            <Card.Img variant="top" alt="book image" src={coverImage}  style={{width: "100%", maxHeight: "25vh"}} />
+            <Card.Img variant="top" alt="book image" src={image}  style={{width: "100%", maxHeight: "25vh"}} />
             <Card.Body>
-            <Card.Title>{title}Title</Card.Title>
-            <Card.Subtitle>{author}Author</Card.Subtitle>
+            <Card.Title>{title}</Card.Title>
+            <Card.Subtitle>{author}Author:</Card.Subtitle>
             <Button variant="danger" onClick={handleRemove}>Remove</Button>
             </Card.Body>
             </Card>
