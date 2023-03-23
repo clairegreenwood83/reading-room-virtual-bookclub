@@ -1,19 +1,91 @@
-import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./MyLibrary.css";
+import { Container, Row, Col } from 'react-bootstrap';
+import "./MyLibrary.css"; 
 import BookCard from "../../BookCard/BookCard";
+import React, { useState } from "react";
 
+function MyLibrary() {
+const [currentlyReading, setCurrentlyReading] = useState([]);
+const [favourites, setFavourites] = useState([]);
+const [previouslyRead, setPreviouslyRead] = useState([]);
 
-function MyLibrary () {
+const addToCurrentlyReading = (book) => {
+setCurrentlyReading([...currentlyReading, book]);
+};
 
-    return (
-        <div>
-            <h1>My Bookshelf</h1>
-            <h3>Currently Reading:</h3>
-            <h3>Favourties:</h3>
+const addToFavourites = (book) => {
+setFavourites([...favourites, book]);
+};
 
-        </div>
-    );
+const addToPreviouslyRead = (book) => {
+setPreviouslyRead([...previouslyRead, book]);
+}
+return (
+    <div>
+      <Container className="container">
+        <h2>My Bookshelf</h2>
+        <Row className="current">
+            <h3>Currently Reading</h3>
+            {currentlyReading.map((book) => (
+                <Col>
+                <BookCard book={book} />
+                </Col>
+            ))}
+                <Col>
+                <BookCard >
+                </BookCard>
+                </Col>
+                <Col>
+                <BookCard >
+                </BookCard>
+                </Col>
+                <Col>
+                <BookCard >
+                </BookCard>
+                </Col>
+        </Row>
+        <Row className="favourites">
+            <h3>Favourites</h3>
+            {favourites.map((book) => (
+                <Col>
+                <BookCard book={book} />
+                </Col>
+            ))}
+                <Col>
+                <BookCard>
+                </BookCard >
+                </Col>
+                <Col>
+                <BookCard>
+                </BookCard >
+                </Col>
+                <Col>
+                <BookCard>
+                </BookCard >
+                </Col>
+        </Row>
+        <Row className="previous">
+            <h3>Previously Read</h3>
+            {previouslyRead.map((book) => (
+                <Col>
+                <BookCard book={book} />
+                </Col>
+            ))}
+                <Col>
+                <BookCard>
+                </BookCard>
+                </Col>
+                <Col>
+                <BookCard>
+                </BookCard>
+                </Col><Col>
+                <BookCard>
+                </BookCard>
+                </Col>
+        </Row>
+      </Container>
+    </div>
+  );
 }
 
- export default MyLibrary;
+export default MyLibrary;
