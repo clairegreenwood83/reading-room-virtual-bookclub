@@ -53,4 +53,8 @@ return (
   );
 }
 
+addToCurrentlyReading();
+addToFavourites();
+addToPreviouslyRead();
+
 export default MyLibrary;
