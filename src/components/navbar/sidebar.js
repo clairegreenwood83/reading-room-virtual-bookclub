@@ -28,18 +28,18 @@ const Sidebar = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="/" activeClassName="activeClicked">
+            <NavLink to="/" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="home">Home</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/search" activeClassName="activeClicked">
+            <NavLink to="/search" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="search">Search</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/myLibrary" activeClassName="activeClicked">
+            <NavLink to="/myLibrary" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="th-large">
                 My Library
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/aboutUs" activeClassName="activeClicked">
+            <NavLink to="/aboutUs" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="sticky-note">About Us</CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
