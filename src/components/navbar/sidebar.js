@@ -56,6 +56,7 @@ const Sidebar = () => {
               style={{ color: "inherit" }}
               target="_blank"
               href="https://github.com/clairegreenwood83/reading-room-virtual-bookclub"
+              rel="noreferrer noopener"
             >
               <CDBIcon fab icon="github" />
               GitHub
