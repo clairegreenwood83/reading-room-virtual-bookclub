@@ -1,49 +1,53 @@
 
-
-.book {
-    display: flex;
-    flex-direction: column;
-    border-radius: 2px;
-    width: 250px;
-    height: 350px;
+.card {
+    border-radius: 5px;
+    width: 100px;
+    height: 180px;
     margin: 10px;
     position: relative;
     text-align: left;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
-.book > .img-container {
-    height: 75%;
+.content {
+    height: 20%;
+}
+
+.card > .img-container {
     overflow: hidden;
+    background: #e9eaec;
     text-align: center;
+    height: 70%;
+    padding-top: 10%;
 
 }
 
-.book > .img-container > .imgage {
-    width: 60%;
-}
+.card > .img-container > img {
+    width: 80%;
+} 
 
-.image {
-    object-fit: cover;
-}
-
-.removeButton {
-    background-color: rgb(131, 5, 141);
-    border: none;
-    
-    font-size: 1.3vh;
-    padding-top: 0.5vh;
+.title {
+    font-size: 50%;
+    padding-top: 5%;
 }
 
 .author {
-    font-size: 1vh;
-    margin: 10px;
+    font-size: 40%;
 }
 
-.title {
-    font-size: 1.5vh;
-    font-weight: bold;
-    margin: 10px;
+.averageRating {
+    font-size: 40%;
 }
+
+.card > .content > ul {
+    list-style-type: none;
+    padding-left: 5%;
+    margin-bottom: 1%
+}
+
+
+
+
+
 
 

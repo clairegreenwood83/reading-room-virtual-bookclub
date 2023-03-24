@@ -1,26 +1,41 @@
-.current {
-   background-color: rgb(229, 255, 238);
+.bg {
+    background-color: rgb(38, 116, 113);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.previous {
-    background-color: rgb(202, 237, 255);
-
-}
-
-.favourites {
-    background-color: rgb(250, 225, 252);
-    
-
-}
-
-h2 {
-    padding-bottom: 10vh;
-}
-
-h3 {
-    padding-top: 5vh;
-}
 .container {
-    margin-top: 10vh;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
     text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 80%;
+}
+
+.myLib h1, h3 {
+    color: white;
+}
+.wantRead {
+    background-color: rgb(75, 165, 162);
+    border-radius: 5px;
+}
+
+.current {
+    background-color: rgb(74, 198, 198);
+        border-radius: 5px;
+}
+.previous {
+    background-color: rgb(75, 165, 162);
+    border-radius: 5px;
 }
