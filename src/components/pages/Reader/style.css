@@ -1,0 +1,28 @@
+.cotr {
+    height: 100vh; 
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: 100vw;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg {
+    background-color: rgb(137, 192, 174);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.viewer {
+    height: 75vh;
+    width: 60vw;
+}
+
+.comments {
+    margin-top: 5vh;
+    height: 25px;
+    background-color: rgb(10, 150, 103);
+}
