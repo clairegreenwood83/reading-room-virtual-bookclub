@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div
-      style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
+      style={{ display: "flex", height: "100vh", position: "sticky", top: "0", overflow: "scroll initial" }}
     >
       <CDBSidebar textColor="#fff" backgroundColor="#333">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
@@ -28,18 +28,18 @@ const Sidebar = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink exact to="/" activeClassName="activeClicked">
+            <NavLink to="/" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="home">Home</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/search" activeClassName="activeClicked">
+            <NavLink to="/search" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="search">Search</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/myLibrary" activeClassName="activeClicked">
+            <NavLink to="/myLibrary" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="th-large">
                 My Library
               </CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/aboutUs" activeClassName="activeClicked">
+            <NavLink to="/aboutUs" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="sticky-note">About Us</CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
@@ -56,6 +56,7 @@ const Sidebar = () => {
               style={{ color: "inherit" }}
               target="_blank"
               href="https://github.com/clairegreenwood83/reading-room-virtual-bookclub"
+              rel="noreferrer noopener"
             >
               <CDBIcon fab icon="github" />
               GitHub

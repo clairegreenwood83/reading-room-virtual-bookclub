@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(38, 116, 113);
+}
+
+.team-title
+{
+    text-align: center;
+    margin: 80px auto auto 0;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.team-description{
+    text-align: center;
+    margin: 30px 30px 30px 30px;
+    font-size: 20px;
+    color: #f3f2f2;
+    font-style: italic;
+}
+
+.divider
+{
+    width: 75px;
+    height: 4px;
+    background-color: rgb(73, 222, 214);
+    position: relative;
+    margin: 20px auto 60px;
+}
+
+.members
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.member
+{
+    margin: 20px 15px;
+    border-radius: 10px;
+    padding: 0;
+    height: 275px;
+    overflow: hidden;
+}
+
+.member:hover
+{
+    transform: scale(1.01);
+}
