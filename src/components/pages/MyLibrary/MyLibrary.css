@@ -1,0 +1,47 @@
+.bg {
+    background-color: rgb(38, 116, 113);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 80%;
+    padding-bottom: 1%;
+}
+
+.myLib h1 {
+    color: white;
+}
+
+.myLib h3 {
+    color: white;
+    font-size: 3vh;
+}
+.wantRead {
+    background-color: rgb(75, 165, 162);
+    border-radius: 5px;
+}
+
+.current {
+    background-color: rgb(74, 198, 198);
+        border-radius: 5px;
+}
+.previous {
+    background-color: rgb(75, 165, 162);
+    border-radius: 5px;
+}
