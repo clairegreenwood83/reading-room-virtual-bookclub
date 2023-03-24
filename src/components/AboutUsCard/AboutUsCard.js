@@ -18,42 +18,6 @@ function TeamMember(props) {
               </div>
           </div>
         </div>
-    // <div className="col-lg-3 col-md-6 d-flex align-items-strech">
-    //     <div className="member" data-aos="fade-up" data-aos-delay="100">
-    //         <div className="member-img">
-    //             <img className="img-fluid" alt={props.name} src={window.location.origin + props.image} />
-
-    //             <div className="social">
-    //                 <a href=""><i className="icofont-github"></i></a> 
-    //             </div>
-    //         </div>
-
-    //         <div className="member-info">
-    //             <h4>{props.name}</h4>
-    //             <span>{props.occupation}</span>
-    //         </div>
-    //     </div>
-    // </div>
-
-
-    // <div className="card">
-    //   <div className="img-container">
-    //     <img alt={props.name} src={props.image} />
-    //   </div>
-    //   <div className="content">
-    //     <ul>
-    //       <li>
-    //         <strong>Name:</strong> {props.name}
-    //       </li>
-    //       <li>
-    //         <strong>Occupation:</strong> {props.occupation}
-    //       </li>
-    //       <li>
-    //         <strong>Location:</strong> {props.location}
-    //       </li>
-    //     </ul>
-    //   </div>
-    // </div>
   );
 }
 
