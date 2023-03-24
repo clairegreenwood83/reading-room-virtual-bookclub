@@ -1,55 +1,19 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import { Cont } from 'react-bootstrap';
 import "./MyLibrary.css"; 
 import BookCard from "../../BookCard/BookCard";
 import library from "../../library.json";
+//import BooksAPI from "../../BooksAPI";
 
 function MyLibrary() {
-// const [currentlyReading, setCurrentlyReading] = useState([]);
-// const [favourites, setFavourites] = useState([]);
-// const [previouslyRead, setPreviouslyRead] = useState([]);
 
-// const addToCurrentlyReading = (book) => {
-// setCurrentlyReading([...currentlyReading, book]);
-// };
-
-// console.log(currentlyReading);
-
-// const addToFavourites = (book) => {
-// setFavourites([...favourites, book]);
-// };
-
-// const addToPreviouslyRead = (book) => {
-// setPreviouslyRead([...previouslyRead, book]);
-// }
-
-//  addToCurrentlyReading({ 
-//     title: "The Great Gatsby", 
-//     author: "F. Scott Fitzgerald", 
-//     coverImage: "https://example.com/greatgatsby.jpg" 
-//   });
-
-//   addToFavourites({ 
-//     title: "To Kill a Mockingbird", 
-//     author: "Harper Lee", 
-//     coverImage: "https://example.com/tokillamockingbird.jpg" 
-//   });
-
-
-
-//   addToPreviouslyRead({ 
-//     title: "1984", 
-//     author: "George Orwell", 
-//     coverImage: "https://example.com/1984.jpg" 
-//   });
 
 return (
     <div>
       <div className="container">
         <h2>My Library</h2>
         <div className="row current justify-content-center">
-            <h3>Currently Reading</h3>
+            <h3>Want To Read</h3>
             <div className="col">
             <BookCard
             id={library[0].id}
@@ -73,7 +37,7 @@ return (
             ))} */}
         </div>
         <div className="row favourites justify-content-center">
-            <h3>Favourites</h3>
+            <h3>Currently Reading</h3>
             <div className="col">
             <BookCard
             id={library[2].id}
@@ -90,7 +54,19 @@ return (
         </div>
         <div className="row previous justify-content-center">
             <h3>Previously Read</h3>
-            <div className="col-3-md">
+            <div className="col">
+            <BookCard
+            id={library[3].id}
+            title={library[3].title}
+            image={library[3].image}
+            author={library[3].author}>
+            </BookCard>
+            <BookCard
+            id={library[4].id}
+            title={library[4].title}
+            image={library[4].image}
+            author={library[4].author}>
+            </BookCard>
             {/* {previouslyRead.map((book) => (
                 <Col>
                 <BookCard className="bookCard" book={book} />
