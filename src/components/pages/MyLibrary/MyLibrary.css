@@ -21,10 +21,16 @@
     flex-wrap: wrap;
     align-items: stretch;
     width: 80%;
+    padding-bottom: 1%;
 }
 
-.myLib h1, h3 {
+.myLib h1 {
     color: white;
+}
+
+.myLib h3 {
+    color: white;
+    font-size: 3vh;
 }
 .wantRead {
     background-color: rgb(75, 165, 162);
