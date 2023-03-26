@@ -3,108 +3,125 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./MyLibrary.css"; 
 import BookCard from "../../BookCard/BookCard";
+import { useState } from "react";
 import library from "../../library.json";
-//import BooksAPI from "../../BooksAPI";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+
 
 function MyLibrary() {
 
+//const library = JSON.parse(localStorage.getItem('myLibrary')) | [];
+//console.log(library);
+
+const [books, setBooks] = useState(library);
+console.log(books);
+
+ const handleOnDragEnd = (result) => {
+    if (!result.destination) return;
+    const items = Array.from(books);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+    setBooks(items);
+  };
 
 return (
     <div className="bg myLib">
         <h1>My Library</h1>
-    <Container>
+
+    <DragDropContext onDragEnd={handleOnDragEnd}>
+         <Droppable droppableId="bookcards">
+            {(provided) => (
+            <div
+            className='flex-center'
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+         <Container>
         <Row className="wantRead mb-3">
         <h3>Want To Read</h3>
-                <Col>
+        {books.filter((book) => book.status === "wantRead").map((book, index) => (
+                <Draggable key={book.id} draggableId={book.id.toString()} index={index}>
+                {(provided) => (
+                <Col
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+                ref={provided.innerRef}
+                >
                 <BookCard
-                id={library[0].id}
-                title={library[0].title}
-                image={library[0].image}
-                author={library[0].author}
-                averageRating={library[0].averageRating}>
-                
+                key={book.id}
+                id={book.id}
+                title={book.title}
+                image={book.image}
+                author={book.author}
+                averageRating={book.averageRating}
+                draggableId={book.id}
+                index={index}>
                 </BookCard>
                 </Col>
-                <Col>
-                <BookCard
-                id={library[1].id}
-                title={library[1].title}
-                image={library[1].image}
-                author={library[1].author}
-                 averageRating={library[0].averageRating}>
-                </BookCard>
-                </Col>
-                <Col>
-                <BookCard
-                id={library[2].id}
-                title={library[2].title}
-                image={library[2].image}
-                author={library[2].author}
-                 averageRating={library[0].averageRating}>
-                </BookCard>
-                </Col>
+                )}
+                </Draggable>
+                ))}
             </Row>
             <Row className="current mb-3">
             <h3>Currently Reading</h3>
-            <Col>
-            <BookCard
-            id={library[2].id}
-            title={library[2].title}
-            image={library[2].image}
-            author={library[2].author}
-             averageRating={library[0].averageRating}>
-            </BookCard>
-            </Col>
-            <Col>
-            <BookCard
-            id={library[3].id}
-            title={library[3].title}
-            image={library[3].image}
-            author={library[3].author}
-             averageRating={library[0].averageRating}>
-            </BookCard>
-            </Col>
-            <Col>
-            <BookCard
-            id={library[3].id}
-            title={library[3].title}
-            image={library[3].image}
-            author={library[3].author}
-             averageRating={library[0].averageRating}>
-            </BookCard>
-            </Col>
+            {books.filter((book) => book.status === "reading").map((book, index) => (
+            <Draggable key={book.id} draggableId={book.id.toString()} index={index}>
+            {(provided) => (
+                <Col
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+                ref={provided.innerRef}
+                >
+                <BookCard
+                key={book.id}
+                id={book.id}
+                title={book.title}
+                image={book.image}
+                author={book.author}
+                averageRating={book.averageRating}
+                draggableId={book.id}
+                index={index}
+                >
+                </BookCard>
+                </Col>
+             )}
+            </Draggable>
+            ))}
             </Row>
             <Row className="previous mb-3">
             <h3>Previously Read</h3>
-            <Col>
-            <BookCard
-            id={library[3].id}
-            title={library[3].title}
-            image={library[3].image}
-            author={library[3].author}
-             averageRating={library[0].averageRating}>
-            </BookCard>
-            </Col>
-            <Col>
-            <BookCard
-            id={library[4].id}
-            title={library[4].title}
-            image={library[4].image}
-            author={library[4].author}
-            averageRating={library[0].averageRating}>
-            </BookCard>
-            </Col>
-            <Col>
-            <BookCard
-            id={library[0].id}
-            title={library[0].title}
-            image={library[0].image}
-            author={library[0].author}
-            averageRating={library[0].averageRating}>
-            </BookCard>
-            </Col>
+             {books.filter((book) => book.status === "previous").map((book, index) => (
+                    <Draggable key={book.id} draggableId={book.id.toString()} index={index}>
+                      {(provided) => (
+                <Col
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+                ref={provided.innerRef}
+                            >
+                <BookCard
+                key={book.id}
+                id={book.id}
+                title={book.title}
+                image={book.image}
+                author={book.author}
+                averageRating={book.averageRating}
+                draggableId={book.id}
+                index={index}>
+                </BookCard>
+                </Col>
+            )}
+            </Draggable>
+            ))}
             </Row>
       </Container>
+               
+            
+
+          {provided.placeholder}
+         </div>
+        )}
+      </Droppable>
+      </DragDropContext>
       </div>
   );
 }

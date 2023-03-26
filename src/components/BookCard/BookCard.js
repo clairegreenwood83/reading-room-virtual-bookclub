@@ -4,11 +4,11 @@ import "./BookCard.css";
 
 function BookCard(props) {
 
-    const { id, image, title, author, averageRating } = props;
+    const { id, image, title, author, averageRating, status } = props;
    
 
     return (
-    <div className="card" key={id}>
+    <div className="card" key={id} status={status}>
        <div className="img-container">
            <img alt="book cover" src={image} />
        </div>
@@ -26,16 +26,6 @@ function BookCard(props) {
             </ul>
         </div>
     </div>
-            // <Card className="book" key={id}>
-            // <div className="img-container">
-            // <Card.Img className="image" variant="top" alt="book image" src={image}/>
-            // </div>
-            // <Card.Body>
-            // <Card.Title className="title">{title}</Card.Title>
-            // <Card.Subtitle className="author">Author: {author}</Card.Subtitle>
-            // <Button className="removeButton" variant="danger" onClick={handleRemove}>Remove</Button>
-            // </Card.Body>
-            // </Card>
     );
   }
   
