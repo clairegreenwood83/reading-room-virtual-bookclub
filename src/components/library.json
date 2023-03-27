@@ -37,7 +37,34 @@
       "title": "Milkman",
       "image": "https://pictures.abebooks.com/isbn/9780571342730-uk-300.jpg",
       "author": "Anna Burns",
-      "averageRating": "2 stars",
-      "status": "reading"
-    }
+      "averageRating": "2 stars"
+    },
+
+    {
+      "id": 6,
+      "title": "Milkman",
+      "image": "https://pictures.abebooks.com/isbn/9780571342730-uk-300.jpg",
+      "author": "Anna Burns",
+      "averageRating": "2 stars"
+    },
+
+    { "id": 7,
+      "title": "Milkman",
+      "image": "https://pictures.abebooks.com/isbn/9780571342730-uk-300.jpg",
+      "author": "Anna Burns",
+      "averageRating": "2 stars"
+  },
+  {  "id": 8,
+      "title": "The Great Gatsby", 
+      "author": "F. Scott Fitzgerald", 
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg", 
+      "averageRating": "4 stars"
+},
+      
+      { "id": 9,
+      "title": "The Great Gatsby", 
+      "author": "F. Scott Fitzgerald", 
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg", 
+      "averageRating": "4 stars"
+}
 ]

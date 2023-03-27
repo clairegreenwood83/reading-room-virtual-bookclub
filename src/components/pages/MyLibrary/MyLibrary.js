@@ -37,7 +37,7 @@ return (
     <div className="bg myLib">
         <h1>My Library</h1>
     <Container>
-        <Row className="favourites mb-3">
+        <Row className="favourites mb-3" style={{ overflowX: "auto" }}>
             <h3>Favourites</h3>
             {books.map(book => (
                 <Col key={book.id}>
@@ -53,7 +53,7 @@ return (
                 </Col>
             ))}
         </Row>
-        <Row className="current mb-3">
+        <Row className="current mb-3" style={{ overflowX: "auto" }}>
             <h3>Currently Reading</h3>
             {currentlyReading.map((book) => (
             <Col key={book.id}>
@@ -69,7 +69,7 @@ return (
             </Col>
            ))}
         </Row>
-        <Row className="previous mb-3">
+        <Row className="previous mb-3" style={{ overflowX: "auto" }}>
             <h3>Previously Read</h3>
            {previouslyRead.map((book) => (
             <Col key={book.id}>
