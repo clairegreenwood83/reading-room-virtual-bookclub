@@ -46,6 +46,26 @@
     margin-bottom: 1%
 }
 
+.remove {
+    font-size: 1vh;
+    background-color: blue;
+    color: white;
+    border-style: none;
+    border-radius: 2px;
+}
+
+.dropdown > select {
+    height: 2vh;
+    font-size: 1vh;
+    width: 7vw;
+    display: block;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+.removeBtn {
+    height: fit-content;
+}
 
 
 

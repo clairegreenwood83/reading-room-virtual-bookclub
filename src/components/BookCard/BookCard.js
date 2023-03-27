@@ -4,11 +4,15 @@ import "./BookCard.css";
 
 function BookCard(props) {
 
-    const { id, image, title, author, averageRating, status } = props;
-   
+    const { id, image, title, author, averageRating, removeBook, moveBook } = props;
+
+   const handleMovebook = (event) => {
+        moveBook(id, event.target.value);
+    }
 
     return (
-    <div className="card" key={id} status={status}>
+  <div>
+    <div className="card" key={id}>
        <div className="img-container">
            <img alt="book cover" src={image} />
        </div>
@@ -25,7 +29,19 @@ function BookCard(props) {
                 </li>
             </ul>
         </div>
-    </div>
+      </div>
+      <div className="dropdown">
+          <select onChange={handleMovebook}>
+                        <option value="">Move to:</option>
+                        <option value="currentlyReading">Currently Reading</option>
+                        <option value="previouslyRead">Previously Read</option>
+                    </select>
+      </div>
+      <div className="removeBtn">
+        <button onClick={() => removeBook(id)} className="remove">Remove</button>
+      </div>
+  </div>
+
     );
   }
   

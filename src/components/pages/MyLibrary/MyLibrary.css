@@ -3,10 +3,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    width: 100vw;
 }
 
 .container {
     height: 100%;
+    width: fit-content;
     display: flex;
     flex-flow: row wrap;
     padding: 20px;
@@ -20,8 +22,11 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    justify-items: center;
     width: 80%;
     padding-bottom: 1%;
+    min-height: 35vh;
+   
 }
 
 .myLib h1 {
@@ -31,8 +36,9 @@
 .myLib h3 {
     color: white;
     font-size: 3vh;
+    padding-top: 1.5vh;
 }
-.wantRead {
+.favourites {
     background-color: rgb(75, 165, 162);
     border-radius: 5px;
 }
