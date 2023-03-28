@@ -1,132 +1,174 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./MyLibrary.css"; 
 import BookCard from "../../BookCard/BookCard";
 import library from "../../library.json";
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 function MyLibrary() {
 
 //const library = JSON.parse(localStorage.getItem('myLibrary')) | [];
 //console.log(library);
 
-const [books, setBooks] = useState(JSON.parse(localStorage.getItem("myLibrary")) || library);
-const [currentlyReading, setCurrentlyReading] = useState(JSON.parse(localStorage.getItem("currentlyReading")) || []);
-const [previouslyRead, setPreviouslyRead] = useState(JSON.parse(localStorage.getItem("previouslyRead")) || []);
+  const [books, setBooks] = useState(library);
+  const [currentlyReading, setCurrentlyReading] = useState([]);
+  const [previouslyRead, setPreviouslyRead] = useState([]);
 
-useEffect(() => {
-  localStorage.setItem("myLibrary", JSON.stringify(books));
-  localStorage.setItem("currentlyReading", JSON.stringify(currentlyReading));
-  localStorage.setItem("previouslyRead", JSON.stringify(previouslyRead));
-}, [books, currentlyReading, previouslyRead]);
+  const moveBook = (bookId, fromList, toList) => {
+    const book = books.find((book) => book.id === bookId);
+    const updatedFromList = fromList.filter((item) => item.id !== bookId);
+    const updatedToList = [...toList, book];
+    setBooks([...updatedFromList, ...updatedToList]);
+    if (toList === currentlyReading) {
+      setCurrentlyReading(updatedToList);
+    } else {
+      setPreviouslyRead(updatedToList);
+    }
+  };
 
+  const removeBook = (bookId, list) => {
+    const updatedList = list.filter((book) => book.id !== bookId);
+    if (list === currentlyReading) {
+      setCurrentlyReading(updatedList);
+    } else {
+      setPreviouslyRead(updatedList);
+    }
+    setBooks(books.filter((book) => book.id !== bookId));
+  };
 
-const removeBook = (id) => {
-    const newBookList = books.filter((library) => library.id !== id);
-    setBooks(newBookList);
-    setCurrentlyReading(currentlyReading.filter((book) => book.id !== id));
-    setPreviouslyRead(previouslyRead.filter((book) => book.id !== id));
-    localStorage.setItem("myLibrary", JSON.stringify(newBookList));
-    localStorage.setItem("currentlyReading", JSON.stringify(currentlyReading));
-    localStorage.setItem("previouslyRead", JSON.stringify(previouslyRead));
-    };
+  const onDragEnd = (result) => {
+    if (!result.destination) {
+      return;
+    }
+    const { source, destination } = result;
+    const sourceList =
+      source.droppableId === "books"
+        ? books
+        : source.droppableId === "currentlyReading"
+        ? currentlyReading
+        : previouslyRead;
+    const destinationList =
+      destination.droppableId === "books"
+        ? books
+        : destination.droppableId === "currentlyReading"
+        ? currentlyReading
+        : previouslyRead;
+    const book = sourceList.find((book) => book.id === result.draggableId);
+    moveBook(book.id, sourceList, destinationList);
+  };
 
-const moveBook = (id, destination) => {
-        const book = books.find((book) => book.id === id);
-        const newBookList = books.filter((book) => book.id !== id);
-
-        const removeFromRow = (row) =>
-          row.filter((book) => book.id !== id);
-        
-        let updatedCurrentlyReading = [...currentlyReading];
-        let updatedPreviouslyRead = [...previouslyRead];
-
-          if (destination === "currentlyReading") {
-            setCurrentlyReading([...currentlyReading, book]);
-            updatedPreviouslyRead = removeFromRow(previouslyRead);
-            setPreviouslyRead(updatedPreviouslyRead);
-            localStorage.setItem("currentlyReading", JSON.stringify([...currentlyReading, book]));
-            localStorage.setItem("previouslyRead", JSON.stringify(updatedPreviouslyRead));
-        } else if (destination === "previouslyRead") {
-            setPreviouslyRead([...previouslyRead, book]);
-            updatedCurrentlyReading = removeFromRow(currentlyReading);
-            setCurrentlyReading(updatedCurrentlyReading);
-            localStorage.setItem("previouslyRead", JSON.stringify([...previouslyRead, book]));
-            localStorage.setItem("currentlyReading", JSON.stringify(updatedCurrentlyReading));
-        } else if (destination === "favourites") {
-          const newCurrentlyReading = currentlyReading.filter((book) => book.id !== id);
-          const newPreviouslyRead = previouslyRead.filter((book) => book.id !== id);  
-            setCurrentlyReading(updatedCurrentlyReading);
-            setPreviouslyRead(updatedPreviouslyRead);
-            setBooks([...books, book]); // add book back to favourites row
-            localStorage.setItem("myLibrary", JSON.stringify([...books, book])); // update localStorage for myLibrary
-            localStorage.setItem("currentlyReading", JSON.stringify(newCurrentlyReading));
-            localStorage.setItem("previouslyRead", JSON.stringify(newPreviouslyRead));
-          }
-        setBooks(newBookList);
-        // save updated arrays to local storage
-
-        localStorage.setItem("myLibrary", JSON.stringify(newBookList));
-
-    };
-
-
-return (
+  return (
     <div className="bg myLib">
-        <h1>My Library</h1>
-    <Container>
-        <Row className="favourites mb-3" style={{ overflowX: "auto" }}>
-            <h3>Favourites</h3>
-            {books.map(book => (
-                <Col key={book.id}>
-                <BookCard
-                moveBook={moveBook}
-                removeBook={removeBook}
-                id={book.id}
-                title={book.title}
-                image={book.image}
-                author={book.author}
-                averageRating={book.averageRating}>
-                </BookCard>
-                </Col>
-            ))}
-        </Row>
-        <Row className="current mb-3" style={{ overflowX: "auto" }}>
-            <h3>Currently Reading</h3>
-            {currentlyReading.map((book) => (
-            <Col key={book.id}>
-              <BookCard
-                removeBook={removeBook}
-                moveBook={moveBook}
-                id={book.id}
-                title={book.title}
-                image={book.image}
-                author={book.author}
-                averageRating={book.averageRating}
-              />
-            </Col>
-           ))}
-        </Row>
-        <Row className="previous mb-3" style={{ overflowX: "auto" }}>
-            <h3>Previously Read</h3>
-           {previouslyRead.map((book) => (
-            <Col key={book.id}>
-              <BookCard
-                removeBook={removeBook}
-                moveBook={moveBook}
-                id={book.id}
-                title={book.title}
-                image={book.image}
-                author={book.author}
-                averageRating={book.averageRating}
-              />
-            </Col>
-          ))}
-            </Row>
-      </Container>
-      </div>
-  );
-}
-
+      <h1>My Library</h1>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Container>
+          <Droppable droppableId="books">
+            {(provided) => (
+              <Row
+                className="favourites mb-3"
+                style={{ overflowX: "auto" }}
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+              >
+                <h3>Favourites</h3>
+                {books.map((book)=> (
+                   <Col>
+                       <BookCard 
+                       moveBook={moveBook}
+                       removeBook={removeBook}
+                       id={book.id}
+                       title={book.title}
+                       image={book.image}
+                       author={book.author}
+                       averageRating={book.averageRating}
+                       />
+                       </Col>
+                 
+               ))}
+              </Row>
+               )}
+                      </Droppable>
+                      <Droppable droppableId="currentlyReading">
+                      {(provided) => (
+                      <Row
+                      className="current mb-3"
+                      style={{ overflowX: "auto" }}
+                      ref={provided.innerRef}
+                      {...provided.droppableProps}
+                      >
+                      <h3>Currently Reading</h3>
+                      {currentlyReading.map((book, index) => (
+                      <Draggable key={book.id} draggableId={book.id} index={index}>
+                      {(provided) => (
+                      <Col
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      >
+                      <BookCard
+                       removeBook={removeBook}
+                       moveBook={moveBook}
+                       id={book.id}
+                       title={book.title}
+                       image={book.image}
+                       author={book.author}
+                       averageRating={book.averageRating}
+                     />
+                        </Col>
+                        )}
+                        </Draggable>
+                        ))}
+                        {provided.placeholder}
+                        </Row>
+                        )}
+                        </Droppable>
+                        <Droppable droppableId="previouslyRead">
+                        {(provided) => (
+                        <Row
+                        className="previous mb-3"
+                        style={{ overflowX: "auto" }}
+                        ref={provided.innerRef}
+                        {...provided.droppableProps}
+                        >
+                        <h3>Previously Read</h3>
+                        {previouslyRead.map((book, index) => (
+                        <Draggable key={book.id} draggableId={book.id} index={index}>
+                        {(provided) => (
+                        <Col
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        >
+                        <BookCard
+                       removeBook={removeBook}
+                       moveBook={moveBook}
+                       id={book.id}
+                       title={book.title}
+                       image={book.image}
+                       author={book.author}
+                       averageRating={book.averageRating}
+                     />
+                        </Col>
+                        )}
+                        </Draggable>
+                        ))}
+                        {provided.placeholder}
+                        </Row>
+                        )}
+                        </Droppable>
+                        </Container>
+                        </DragDropContext>
+                        </div>
+                        );
+                        }
 
 export default MyLibrary;
+
+
+
+
+
+
+
+
