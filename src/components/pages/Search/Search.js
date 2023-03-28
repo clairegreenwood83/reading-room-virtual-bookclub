@@ -45,7 +45,7 @@ const Search = () => {
               placeholder="Enter A Book Name"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              onkeypress={searchBook}
+              onKeyPress={searchBook}
             />
             <button>
               <i className="fas fa-search"></i>
