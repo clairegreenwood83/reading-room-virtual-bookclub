@@ -1,11 +1,11 @@
 .description
 {
     width: 275px;
-    height: 285px;
+    height: 290px;
     position: relative;
     background-color: rgba(8,61,119,0.5);
     transform: translateY(0);
-    border-radius: 15px;
+    border-radius: 5px;
     transition: all 1s;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
 
 .member:hover
 {
-    transform: scale(1.01);
+    transform: scale(1.08);
 }
 
 .member:hover .description

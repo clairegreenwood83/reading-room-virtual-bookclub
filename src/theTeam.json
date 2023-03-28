@@ -4,8 +4,8 @@
     "name": "Claire Greenwood",
     "image": "/images/claire.png",
     "occupation": "Web Developer",
-    "description": "A talented web developer who has a passion for UI design. Claire is not only a hardworking professional but also a loving and caring mother of two.",
-    "githubLink":""
+    "description": "A talented web developer who has a passion for UI design. Claire is not only a hardworking professional but also a loving and caring mother of three.",
+    "githubLink":"https://github.com/clairegreenwood83"
   },
   {
     "id": 2,
@@ -13,15 +13,15 @@
     "image": "/images/heil.png",
     "occupation": "Web Developer",
     "description": "A skilled web developer with a passion for coding. Heil has a keen eye for detail and a talent for crafting complex and innovative web solutions.",
-    "githubLink":""
+    "githubLink":"https://github.com/heyilll"
   },
   {
     "id": 3,
     "name": "Ciprian Oltean",
     "image": "/images/ciprian.png",
-    "occupation": "Skier",
-    "description": "A talented skier who spends his free time pursuing his passion for skiing. When he's not hitting the slopes, Ciprian can be found crafting innovative web solutions.",
-    "githubLink":""
+    "occupation": "Web Developer",
+    "description": "An enthusiastic web developer who has a strong interest in UI design. When he's not coding or designing, Ciprian loves to hit the slopes and go skiing.",
+    "githubLink":"https://github.com/codefastlearner"
   },
   {
     "id": 4,
