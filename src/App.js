@@ -5,6 +5,7 @@ import Sidebar from './components/navbar/sidebar'
 import Home from './components/pages/Home';
 import AboutUs from './components/pages/AboutUs/aboutUs';
 import MyLibrary from './components/pages/MyLibrary/MyLibrary';
+import Search from './components/pages/Search/Search';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/MyLibrary" element={<MyLibrary />} />
           <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </div>
     </Router>
