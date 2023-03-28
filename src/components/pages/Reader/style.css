@@ -1,5 +1,5 @@
 .cotr {
-    height: 100vh; 
+    min-height: fit-content;
     padding-left: 3rem;
     padding-right: 3rem;
     width: 100vw;
@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
 }
 
 .bg {
@@ -19,10 +20,4 @@
 .viewer {
     height: 75vh;
     width: 60vw;
-}
-
-.comments {
-    margin-top: 5vh;
-    height: 25px;
-    background-color: rgb(10, 150, 103);
-}
+} 

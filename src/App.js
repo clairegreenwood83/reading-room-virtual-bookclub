@@ -17,10 +17,10 @@ function App() {
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
 
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/MyLibrary" element={<MyLibrary />} />
           <Route path="/aboutUs" element={<AboutUs />} />
-          {/* <Route path="/" element={<Reader />} />  */}
+          <Route path="/" element={<Reader />} /> 
         </Routes>
       </div>
     </Router>
