@@ -3,11 +3,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 100vh;
     width: 100vw;
 }
+.mylib {
+    min-height: fit-content;
+    width: fit-content;
 
+}
 .container {
-    height: 100%;
+    min-height: fit-content;
     width: fit-content;
     display: flex;
     flex-flow: row wrap;

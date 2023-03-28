@@ -35,6 +35,7 @@ function BookCard(props) {
                         <option value="">Move to:</option>
                         <option value="currentlyReading">Currently Reading</option>
                         <option value="previouslyRead">Previously Read</option>
+                        <option value="favourites">Favourites</option>
                     </select>
       </div>
       <div className="removeBtn">
