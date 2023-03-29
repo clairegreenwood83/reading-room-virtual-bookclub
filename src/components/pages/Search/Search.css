@@ -5,7 +5,7 @@
 }
 
 .bg-search{
-    background: url(../../../../public/images/library_2.jpg) no-repeat center center fixed;
+    background: url(../../../../public/images/library_2.jpg) no-repeat center center ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -18,6 +18,12 @@
     color: white;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.bg-search h1 > span{
+    color: rgb(55, 234, 228);
+    font-weight: bold;
+    background-color:rgba(0, 29, 98, 0.488);
 }
 
 .bg-search p{

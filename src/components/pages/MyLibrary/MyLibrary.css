@@ -28,25 +28,26 @@
     flex-wrap: wrap;
     align-items: stretch;
     justify-items: center;
-    width: 90%;
+    width: 75vw;
     padding-bottom: 1%;
     min-height: 35vh;
    
 }
 
 .col {
-    width: 100px;
+    width: 230px;
     margin-left: 1vw;
     margin-right: 1vw;
 }
 
 .myLib h1 {
     color: white;
+    margin-top: 20px;
 }
 
 .myLib h3 {
     color: white;
-    font-size: 3vh;
+    font-size: clamp(18px, 1.9vw, 35px);
     padding-top: 1.5vh;
 }
 .favourites {
