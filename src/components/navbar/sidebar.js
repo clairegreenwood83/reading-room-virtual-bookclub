@@ -43,7 +43,7 @@ const Sidebar = () => {
               <CDBSidebarMenuItem icon="sticky-note">About Us</CDBSidebarMenuItem>
             </NavLink>
             <NavLink to="/contact" className={({ isActive }) => isActive? "activeClicked": ''}>
-              <CDBSidebarMenuItem icon="phone">Contact</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="envelope">Contact</CDBSidebarMenuItem>
             </NavLink>
 
           </CDBSidebarMenu>

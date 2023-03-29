@@ -36,7 +36,7 @@ const Search = () => {
           </div>
         </div>
 
-        <div className="row col-12 mx-auto">
+        <div className="rowsb col-12 mx-auto">
           <h2>Find A Book!</h2>
           <div className="search">
             <input
