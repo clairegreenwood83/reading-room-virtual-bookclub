@@ -26,7 +26,7 @@ function ContactForm() {
         </div>
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <div className="col-xs-12">
-          <div className="styled-input wide">
+          <div class="styled-input wide">
             <textarea
               placeholder="Your thoughts.."
               id="message"
