@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutUsCard.css";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function TeamMember(props) {
     return (
@@ -15,6 +16,7 @@ function TeamMember(props) {
               </p>
               <div className="social-media">
                 <a href={props.githublink} target="_blank" rel="noreferrer noopener"><GitHubIcon /></a>
+                <a href={props.linkedinlink} target="_blank" rel="noreferrer noopener"><LinkedInIcon /></a>
               </div>
           </div>
         </div>

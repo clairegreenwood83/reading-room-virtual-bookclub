@@ -29,7 +29,7 @@
     font-weight: 700;
     margin-bottom: 7px;
 }
-.bcard .bottom .author{
+.bcard .bottom .data{
     position: relative;
     color: #686868;
     bottom: 2px;
@@ -124,12 +124,26 @@
     font-weight: bold;
     padding: 0.3rem 0.5rem;
 }
+
+.overlay-inner .inner-box .readNow {
+    outline: none;
+    border: none;
+    margin: 5px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #24a0ed;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+}
 .overlay-inner .descriptionbook {
     margin-top: 2rem;
     padding: 1rem;
     width: 100%;
-    height: 32vh;
+    height: 30vh;
     text-align: justify;
     font-size: 0.9rem;
     overflow-y: scroll;
+    color: rgb(43, 42, 42);
+    font-size: 0.9rem;
 }

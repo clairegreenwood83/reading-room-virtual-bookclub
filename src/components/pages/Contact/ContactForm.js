@@ -9,7 +9,7 @@ function ContactForm() {
   }
   return (
     <form className="container" onSubmit={handleSubmit}>
-      <div className="row">
+      <div className="rowcf">
         <h4>We'd love to hear from you!</h4>
       </div>
       <div className="row input-container">
@@ -39,7 +39,7 @@ function ContactForm() {
           field="message"
           errors={state.errors}
         />
-        <button className="btn-lrg submit-btn" type="submit" disabled={state.submitting}>
+        <button className="btn-sml submit-btn" type="submit" disabled={state.submitting}>
           Submit
         </button>
       </div>
