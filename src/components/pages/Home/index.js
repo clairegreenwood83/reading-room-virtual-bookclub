@@ -11,17 +11,17 @@ function Home() {
             <button className="btn btn-primary btn-lg" type="button">Enter</button>
           </div>
         </div>
-        <div className="row align-items-md-stretch mini">
-          <div className="col-md-6">
-            <div className="h-100 p-5 text-white bg-dark rounded-3">
+        <div className="btc mini">
+          <div className="col-6">
+            <div className="h-100 p-5 text-white bg-dark rounded-3" id="c1">
               <h2>Our Motivation</h2>
               <p>We wanted a one-stop shop where we could manage our book 
                 library, search for books on different marketplaces and read in a collaborative 
                 way with other people.</p> 
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="h-100 p-5 bg-light border rounded-3">
+          <div className="col-6">
+            <div className="h-100 p-5 bg-light border rounded-3" id="c2">
               <h2>Search for books</h2>
               <p>You can search for books to add to your library! You can also view more information 
                 about each result </p>
