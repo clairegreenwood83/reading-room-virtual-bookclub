@@ -8,7 +8,7 @@ function Home() {
           <div className="container-fluid py-5">
             <h1 className="display-5 fw-bold">ReadingRoom</h1>
             <p className="col-md-8 fs-4">Welcome to your book management web app!</p>
-            <button className="btn btn-primary btn-lg" type="button">Enter</button>
+            <a className="btn btn-primary btn-lg" href="/MyLibrary">Enter</a>
           </div>
         </div>
         <div className="btc mini">
@@ -25,7 +25,7 @@ function Home() {
               <h2>Search for books</h2>
               <p>You can search for books to add to your library! You can also view more information 
                 about each result </p>
-              <button className="btn btn-outline-secondary" type="button">Search</button>
+              <a className="btn btn-outline-secondary" href="/search">Search</a>
             </div>
           </div>
         </div>
