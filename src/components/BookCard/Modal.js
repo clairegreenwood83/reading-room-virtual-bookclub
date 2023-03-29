@@ -19,11 +19,27 @@ const Modal=({show,item,onClose})=>{
         pageCount = "N.A."
     }
 
+    const saveBook = (e) => {
+        e.preventDefault();
+        let arr = JSON.parse(localStorage.getItem("myLibrary"));
+        if (!arr) {
+            arr = [];
+        }
+
+        if(arr.filter(value=> value.title==item.volumeInfo.title).length > 0) {
+            console.log("Already in library!");
+        }          
+        else {
+            arr.unshift(item.volumeInfo);
+            localStorage.setItem("myLibrary", JSON.stringify(arr));
+        }   
+    }
+
     return(
         <>
             <div className="overlay">
                 <div className="overlay-inner">
-                    <button className="close" onClick={onClose}><i class="fas fa-times"></i></button>
+                    <button className="close" onClick={onClose}><i className="fas fa-times"></i></button>
                     <div className="inner-box">
                         <img src={thumbnail} alt="" />
                         <div className="info">
@@ -34,7 +50,7 @@ const Modal=({show,item,onClose})=>{
                             <h2><strong>Category: </strong><em>{category}</em></h2>
                             <h2><strong>Page Count: </strong><em>{pageCount}</em></h2>
                             <a href={item.volumeInfo.previewLink} target="_blank" rel="noreferrer noopener"><button className="infobtn">More</button></a>
-                            <a href=""><button className="favbtn">Add to <BsBookmarkHeart /></button></a>
+                            <a href=""><button className="favbtn" onClick={saveBook}>Add to <BsBookmarkHeart /></button></a>
                         </div>
                     </div>
                     <h4 className="descriptionbook">{item.volumeInfo.description}</h4>

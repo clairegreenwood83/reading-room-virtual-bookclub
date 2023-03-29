@@ -24,9 +24,9 @@ const Search = () => {
     }
   };
   return (
-    <div>
+    <div className="cont">
       <div>
-        <div className="jumbotron jumbotron-fluid">
+        <div className="jumbotron jumbotron-fluid col-12 ">
           <div className="container-fluid">
             <h1 className="display-4">Welcome to your ReadingRoom</h1>
             <p className="lead">
@@ -37,7 +37,7 @@ const Search = () => {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row col-12 mx-auto">
           <h2>Find A Book!</h2>
           <div className="search">
             <input
