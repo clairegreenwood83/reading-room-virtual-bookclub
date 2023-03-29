@@ -22,9 +22,9 @@
 }
 
 .bg-main h1{
-    font-size: clamp(25px, 3.5vw, 55px);
+    font-size: clamp(25px, 3.7vw, 55px);
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .bg-main p{
@@ -66,6 +66,7 @@
 } 
 
 .btc h2{
+    margin-top: 20px;
     font-size: clamp(17px, 2.5vw, 40px);
 }
 

@@ -21,25 +21,29 @@
 }
 
 .bg-search p{
-    font-size: clamp(15px, 2vw, 30px);
+    font-size: clamp(15px, 2.2vw, 35px);
     color: rgb(255, 255, 255);
     background-color:rgba(0, 0, 0, 0.385);
     margin-top: 60px;
     margin-bottom: 20px;
 }
 
-.row{
+.rowsb{
     text-align: center;
     align-items: center;
+    min-height: 23vh;
+    justify-items: center;
+    width: 90%;
+    display:grid;
 }
-.row h2{
-    font-size: clamp(20px, 2.5vw, 40px);
+.rowsb h2{
+    font-size: clamp(20px, 2.7vw, 40px);
     margin-top: 20px;
     margin-bottom: 15px;
     color: white;
 }
 
-.row h1{
+.rowsb h1{
     font-size: 3rem;
     text-align: center;
     font-family: 'Bodoni Moda', serif;
