@@ -15,6 +15,8 @@ function BookCard(props) {
     if (destin === currStatus) {
       console.log("Already in category!");
       return;
+    } else if (destin === "") {
+      return;
     }
 
     let obooks =  JSON.parse(localStorage.getItem(currStatus));
