@@ -124,6 +124,18 @@
     font-weight: bold;
     padding: 0.3rem 0.5rem;
 }
+
+.overlay-inner .inner-box .readNow {
+    outline: none;
+    border: none;
+    margin: 5px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #24a0ed;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+}
 .overlay-inner .descriptionbook {
     margin-top: 2rem;
     padding: 1rem;
