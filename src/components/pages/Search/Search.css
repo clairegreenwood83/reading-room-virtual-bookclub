@@ -1,7 +1,10 @@
+.cont {
+    min-height: fit-content;
+    width: 100vw; 
+    justify-content: center;
+}
+
 .row{
-    position:relative;
-    top:20px;
-    bottom: 20px;
     text-align: center;
     align-items: center;
 }
@@ -53,15 +56,13 @@
     height: 40vh;
     background-color: white; 
     border-radius: 25px;
-    width: fit-content; 
+    width: auto;
     padding-top: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-  
-
   }
 
   .lead {

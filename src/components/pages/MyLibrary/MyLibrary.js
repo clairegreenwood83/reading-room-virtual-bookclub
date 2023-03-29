@@ -2,15 +2,14 @@ import React, {useState, useEffect} from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./MyLibrary.css"; 
-import BookCard from "../../BookCard/BookCard";
-import library from "../../library.json";
+import BookCard from "../../BookCard/BookCard"; 
 
 function MyLibrary() {
 
 //const library = JSON.parse(localStorage.getItem('myLibrary')) | [];
 //console.log(library);
 
-const [books, setBooks] = useState(JSON.parse(localStorage.getItem("myLibrary")) || library);
+const [books, setBooks] = useState(JSON.parse(localStorage.getItem("myLibrary")));
 const [currentlyReading, setCurrentlyReading] = useState(JSON.parse(localStorage.getItem("currentlyReading")) || []);
 const [previouslyRead, setPreviouslyRead] = useState(JSON.parse(localStorage.getItem("previouslyRead")) || []);
 
@@ -84,8 +83,8 @@ return (
                 removeBook={removeBook}
                 id={book.id}
                 title={book.title}
-                image={book.image}
-                author={book.author}
+                image={book.imageLinks.thumbnail}
+                author={book.authors[0]}
                 averageRating={book.averageRating}>
                 </BookCard>
                 </Col>
