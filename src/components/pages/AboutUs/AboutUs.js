@@ -21,6 +21,7 @@ function AboutUs() {
           occupation={theTeam[0].occupation}
           description={theTeam[0].description}
           githublink={theTeam[0].githubLink}
+          linkedinlink={theTeam[0].linkedinlink}
         />
         <AboutUsCard
           name={theTeam[1].name}
@@ -28,6 +29,7 @@ function AboutUs() {
           occupation={theTeam[1].occupation}
           description={theTeam[1].description}
           githublink={theTeam[1].githubLink}
+          linkedinlink={theTeam[1].linkedinlink}
         />
         <AboutUsCard
           name={theTeam[2].name}
@@ -35,6 +37,7 @@ function AboutUs() {
           occupation={theTeam[2].occupation}
           description={theTeam[2].description}
           githublink={theTeam[2].githubLink}
+          linkedinlink={theTeam[2].linkedinlink}
         />
         <AboutUsCard
           name={theTeam[3].name}
@@ -42,6 +45,7 @@ function AboutUs() {
           occupation={theTeam[3].occupation}
           description={theTeam[3].description}
           githublink={theTeam[3].githubLink}
+          linkedinlink={theTeam[3].linkedinlink}
         />    
       </div>
     </div>
