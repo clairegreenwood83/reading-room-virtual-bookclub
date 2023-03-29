@@ -10,11 +10,18 @@ const [books, setBooks] = useState(JSON.parse(localStorage?.getItem("myLibrary")
 const [currentlyReading, setCurrentlyReading] = useState(JSON.parse(localStorage.getItem("currentlyReading")) || []);
 const [previouslyRead, setPreviouslyRead] = useState(JSON.parse(localStorage.getItem("previouslyRead")) || []);
 
+function selectElement() {    
+  let element = document.querySelectorAll('#dd');
+  element.value = "";
+  console.log('def');
+}
+
 useEffect(() => {
   const interval = setInterval(() => {
     setBooks(JSON.parse(localStorage.getItem("myLibrary")));
     setCurrentlyReading(JSON.parse(localStorage.getItem("currentlyReading")));
     setPreviouslyRead(JSON.parse(localStorage.getItem("previouslyRead")));
+    selectElement();
   }, 500);
 
   return () => {

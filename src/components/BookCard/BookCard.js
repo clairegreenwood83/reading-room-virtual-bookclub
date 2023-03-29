@@ -33,6 +33,7 @@ function BookCard(props) {
 
     localStorage.setItem(currStatus, JSON.stringify(newoBookList));
     localStorage.setItem(destin, JSON.stringify([...nbooks, movingB]));
+    event.target.value = "";
   }
 
   const removeBook = () => {
@@ -41,37 +42,37 @@ function BookCard(props) {
     localStorage.setItem(currStatus, JSON.stringify(newBookList));
   };
 
-    return (
-  <div>
-    <div className="card" key={id}>
-       <div className="img-container">
-           <img alt="book cover" src={image} />
-       </div>
-       <div className="content">
-            <ul>
-                <li className="title">
-                  <strong>Title:</strong> {title}
-                </li>
-                <li className="author">
-                  <strong>Author:</strong> {author}
-                </li>
-            </ul>
+  return (
+    <div>
+      <div className="card" key={id}>
+        <div className="img-container">
+          <img alt="book cover" src={image} />
+        </div>
+        <div className="content">
+          <ul>
+            <li className="title">
+              <strong>Title:</strong> {title}
+            </li>
+            <li className="author">
+              <strong>Author:</strong> {author}
+            </li>
+          </ul>
         </div>
       </div>
       <div className="dropdown">
-          <select onChange={handleMovebook}>
-                        <option value="">Move to:</option>
-                        <option value="currentlyReading">Currently Reading</option>
-                        <option value="previouslyRead">Previously Read</option>
-                        <option value="myLibrary">Favourites</option>
-                    </select>
+        <select onChange={handleMovebook}>
+          <option value="">Move to:</option>
+          <option value="currentlyReading">Currently Reading</option>
+          <option value="previouslyRead">Previously Read</option>
+          <option value="myLibrary">Favourites</option>
+        </select>
       </div>
       <div className="removeBtn">
         <button onClick={removeBook} className="remove">Remove</button>
       </div>
   </div>
 
-    );
-  }
+  );
+}
   
-  export default BookCard;
+export default BookCard;
