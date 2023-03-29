@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import Modal from "./Modal";
 import { ImQuill } from "react-icons/im";
 import {ImStatsBars} from "react-icons/im";
@@ -29,8 +29,8 @@ const BookCard2 = ({ book }) => {
                                 <img src={thumbnail} alt="" />
                                 <div className="bottom">
                                     <h3 className="title">{item.volumeInfo.title}</h3>
-                                    <h3 className="author"><ImQuill /> Author: <em>{author}</em></h3>
-                                    <h3 className="author"><ImStatsBars /> Rating: <em>{averageRating} / 5</em></h3>
+                                    <h3 className="data"><ImQuill /> Author: <em>{author}</em></h3>
+                                    <h3 className="data"><ImStatsBars /> Rating: <em>{averageRating} / 5</em></h3>
                                 </div>
                             </div>
                               <Modal show={show} item={bookItem} onClose={()=>setShow(false)}/>
