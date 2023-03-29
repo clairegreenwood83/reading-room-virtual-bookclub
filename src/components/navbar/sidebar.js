@@ -42,6 +42,10 @@ const Sidebar = () => {
             <NavLink to="/aboutUs" className={({ isActive }) => isActive? "activeClicked": ''}>
               <CDBSidebarMenuItem icon="sticky-note">About Us</CDBSidebarMenuItem>
             </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => isActive? "activeClicked": ''}>
+              <CDBSidebarMenuItem icon="envelope">Contact</CDBSidebarMenuItem>
+            </NavLink>
+
           </CDBSidebarMenu>
         </CDBSidebarContent>
 

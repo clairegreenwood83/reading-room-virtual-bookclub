@@ -5,7 +5,8 @@
     "image": "/images/claire.png",
     "occupation": "Web Developer",
     "description": "A talented web developer who has a passion for UI design. Claire is not only a hardworking professional but also a loving and caring mother of three.",
-    "githubLink":"https://github.com/clairegreenwood83"
+    "githubLink":"https://github.com/clairegreenwood83",
+    "linkedinlink":"https://www.linkedin.com/in/claire-greenwood-678a71267/"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "image": "/images/heil.png",
     "occupation": "Web Developer",
     "description": "A skilled web developer with a passion for coding. Heil has a keen eye for detail and a talent for crafting complex and innovative web solutions.",
-    "githubLink":"https://github.com/heyilll"
+    "githubLink":"https://github.com/heyilll",
+    "linkedinlink":"https://www.linkedin.com/in/heil-park/"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "image": "/images/ciprian.png",
     "occupation": "Web Developer",
     "description": "An enthusiastic web developer who has a strong interest in UI design. When he's not coding or designing, Ciprian loves to hit the slopes and go skiing.",
-    "githubLink":""
+    "githubLink":"https://github.com/codefastlearner",
+    "linkedinlink": "https://www.linkedin.com/in/ciprian-oltean/"
   },
   {
     "id": 4,
@@ -29,6 +32,7 @@
     "image": "/images/valentin.png",
     "occupation": "Web Developer",
     "description": "A dedicated web developer with a passion for both UI design and coding. In his free time, Valentin can be found tinkering with his 3D printer, bringing his ideas to life.",
-    "githubLink":"https://github.com/valimanea"
+    "githubLink":"https://github.com/valimanea",
+    "linkedinlink":"https://www.linkedin.com/in/valentin-manea/"
   }
 ]

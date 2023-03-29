@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lato:ital,wght@1,100;1,300;1,400&family=Orbitron&family=Roboto+Mono:wght@200&family=Roboto:ital,wght@1,100&display=swap');
+
+.cont {
+    min-height: fit-content;
+    width: 100vw; 
+    justify-content: center;
+}
+
+.bg-search{
+    background: url(../../../../public/images/library_2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;   
+    width:100%;
+}
+
+.bg-search h1{
+    font-size: clamp(25px, 3.5vw, 55px);
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bg-search p{
+    font-size: clamp(15px, 2.2vw, 35px);
+    color: rgb(255, 255, 255);
+    background-color:rgba(0, 0, 0, 0.385);
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.rowsb{
+    text-align: center;
+    align-items: center;
+    min-height: 23vh;
+    justify-items: center;
+    width: 90%;
+    display:grid;
+}
+.rowsb h2{
+    font-size: clamp(20px, 2.7vw, 40px);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.rowsb h1{
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+}
+.search{
+    /* display:block; */
+    align-items: center;
+    justify-content: center;
+}
+.search input{
+    outline: 0;
+    border: 0;
+    width: 30vw;
+    height: 5vh;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.search button{
+    outline: none;
+    border: none;
+    height: 5vh;
+    width: 5vh;
+    padding: 0 0.5rem;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+    display:flex;
+    grid-template-columns: repeat(auto-fit,minmax(15vw,1fr));
+    grid-gap:20px;
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    background-color: white; 
+    border-radius: 25px;
+    width: auto;
+    /* padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem; */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .lead {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 230;
+    font-family: 'Roboto Mono', monospace;
+
+
+  }
+
+  .auth-lead {
+    font-weight: 900;
+    line-height: 3;
+  }
+
+  .display-4 {
+    font-weight: 600;
+    font-size: 2.3rem;
+    color: black;
+    line-height: 4;
+
+  }
+
+
