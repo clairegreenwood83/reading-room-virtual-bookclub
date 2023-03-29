@@ -51,6 +51,7 @@ const Modal=({show,item,onClose})=>{
                             <h2><strong>Page Count: </strong><em>{pageCount}</em></h2>
                             <a href={item.volumeInfo.previewLink} target="_blank" rel="noreferrer noopener"><button className="infobtn">More</button></a>
                             <a href=""><button className="favbtn" onClick={saveBook}>Add to <BsBookmarkHeart /></button></a>
+                            <a href=""><button className="readNow">Read Now</button></a>
                         </div>
                     </div>
                     <h4 className="descriptionbook">{item.volumeInfo.description}</h4>
