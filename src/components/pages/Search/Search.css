@@ -90,7 +90,7 @@
 .jumbotron {
     display: flex;
     justify-content: center;
-    height: 40vh;
+    /* height: 40vh; */
     background-color: white; 
     border-radius: 25px;
     width: auto;
