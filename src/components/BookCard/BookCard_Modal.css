@@ -110,10 +110,14 @@
     margin: 5px;
     width: 100px;
     border-radius: 5px;
-    background-color: #24a0ed;
+    background-color: #1dcac2;
     color: white;
     font-weight: bold;
     padding: 0.3rem 0.5rem;
+}
+
+.overlay-inner .inner-box .infobtn:hover{
+    background-color: #149791;
 }
 
 .overlay-inner .inner-box .favbtn{
@@ -122,10 +126,18 @@
     margin: 5px;
     width: 100px;
     border-radius: 5px;
-    background-color: #24a0ed;
+    background-color: #1dcac2;
     color: #ffffff;
     font-weight: bold;
     padding: 0.3rem 0.5rem;
+}
+
+.overlay-inner .inner-box .favbtn:hover{
+    background-color: #149791;
+}
+
+.overlay-inner .inner-box .favbtn:active{
+    background-color: #890444;
 }
 
 .overlay-inner .inner-box .readNow {
@@ -134,10 +146,14 @@
     margin: 5px;
     width: 120px;
     border-radius: 5px;
-    background-color: #24a0ed;
+    background-color: #1dcac2;
     color: #ffffff;
     font-weight: bold;
     padding: 0.3rem 0.5rem;
+}
+
+.overlay-inner .inner-box .readNow:hover {
+    background-color: #149791;
 }
 .overlay-inner .descriptionbook {
     margin-top: 2rem;

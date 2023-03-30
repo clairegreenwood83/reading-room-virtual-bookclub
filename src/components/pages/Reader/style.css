@@ -10,6 +10,12 @@
     flex-direction: column;
 }
 
+.cotr h1{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 .bg-reader {
     background-color: rgb(38, 116, 113);
     background-repeat: no-repeat;
