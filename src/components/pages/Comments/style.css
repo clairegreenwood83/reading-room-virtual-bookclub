@@ -1,0 +1,63 @@
+.comments {
+    margin-top: 5vh;
+    max-width: 1300px; 
+    width: 50vw;
+	border-radius: 1rem;
+	padding: 1rem;
+    background-color: rgb(10, 150, 103);
+}
+
+.comment {
+	display: block;
+	transition: all 1s;
+}
+
+.comments textarea {
+    width: 100%;
+    border: none;
+    background: #E8E8E8;
+    padding: 5px 10px;
+    height: 70%;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 2px solid #016BA8;
+    transition: all 0.5s;
+    margin-top: 2rem;
+    min-height: 3vh;
+    color:blue;
+}
+
+.primaryContained{
+    background: #016ba8;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    margin-top: 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+    transition: 1s all;
+    font-size: 10px;
+    border-radius: 5px; 
+    max-width: min-content;
+    margin-top: 5px;
+    float: left;
+} 
+
+.row {
+    width: 100%;
+}
+
+/* .trow {
+    display: flex;
+    flex-direction: column; 
+} */
+
+#username { 
+    height: 10vh;
+    max-height: 35px;
+    max-width: min-content;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+}

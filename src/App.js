@@ -7,6 +7,7 @@ import AboutUs from "./components/pages/AboutUs/AboutUs";
 import MyLibrary from "./components/pages/MyLibrary/MyLibrary";
 import Search from "./components/pages/Search/Search";
 import ContactForm from "./components/pages/Contact/ContactForm";
+import Reader from "./components/pages/Reader";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/MyLibrary" element={<MyLibrary />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/reader" element={<Reader />} />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </div>
