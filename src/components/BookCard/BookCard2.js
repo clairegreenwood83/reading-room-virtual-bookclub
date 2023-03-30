@@ -25,7 +25,7 @@ const BookCard2 = ({ book }) => {
                     {
                         return (
                             <>
-                            <div className="bcard" onClick={()=>{setShow(true);setItem(item)}}>
+                            <div className="bcard" key = {item.id} onClick={()=>{setShow(true);setItem(item)}}>
                                 <img src={thumbnail} alt="" />
                                 <div className="bottom">
                                     <h3 className="title">{item.volumeInfo.title}</h3>
