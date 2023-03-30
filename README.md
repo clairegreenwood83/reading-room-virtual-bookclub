@@ -11,7 +11,7 @@
 
  <h3 align="center">A innovative  book library</h3>
 
-## Description 
+## Description
 
 <p align="center">
 We wanted a one-stop shop where we could manage our book library, search for books on different marketplaces and read in a collaborative way with other people.
@@ -50,9 +50,12 @@ We wanted a one-stop shop where we could manage our book library, search for boo
   </ol>
 </details>
 
+## About The Project
 
+![Employee data](./src/components/Images/AppSC.png "ReadingRoom")
 
 ## Getting Started
+
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
@@ -68,7 +71,7 @@ To get a local copy up and running follow these simple example steps.
 8.  React Icons
 9.  React-dom
 10. React-router-dom
-11. Node 
+11. Node
 12. My JSON Server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -76,33 +79,44 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+
+- npm
   ```sh
   npm install npm@latest -g
   ```
 
 ### Installation
 
-1. Get a free API Key at 
-* [https://developers.google.com/books/docs/v1/using](https://developers.google.com/books/docs/v1/using)
+1. Get a free API Key at
+
+- [https://developers.google.com/books/docs/v1/using](https://developers.google.com/books/docs/v1/using)
+
 2. Clone the repo
    ```sh
    git clone git@github.com:clairegreenwood83/reading-room-virtual-bookclub.git
    ```
 3. Install NPM packages
+
    ```sh
    npm i
-   
+
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Executing program
 
-
 ```
 npm i
 ```
+
+## Usage
+
+Please click the image and follow the instructions from this video to use the App. Thank you!
+
+[<img src="./src/components/Images/VideoLink.png" width="50%">](https://drive.google.com/file/d/1wMIprf1I4X2GyXSWo7MiUBfV0Dt0xvPR/view "ReadingRoom Video")
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Authors
 
