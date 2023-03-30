@@ -28,7 +28,7 @@ const Search = () => {
       <div>
         <div className="jumbotron jumbotron-fluid col-12 bg-search">
           <div className="container-fluid ">
-            <h1 className="display-4">Welcome to your ReadingRoom</h1>
+            <h1 className="display-4">Welcome to your <span>ReadingRoom</span></h1>
             <p className="lead">
               "A book is a garden, an orchard, a storehouse, a party, a company
               by the way, a counselor, a multitude of counselors."<b>- Charles Baudelaire</b>

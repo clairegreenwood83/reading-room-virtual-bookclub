@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import {BsBookmarkHeart} from "react-icons/bs";
+import {BsInfoCircle} from "react-icons/bs";
+import {BiBookOpen} from "react-icons/bi";
 import "./BookCard_Modal.css";
 
 const Modal=({show,item,onClose})=>{
@@ -8,7 +10,7 @@ const Modal=({show,item,onClose})=>{
     {
         return null;
     }
-    let thumbnail=item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail;
+    let thumbnail = item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail;
     let category = item.volumeInfo.categories;
     let pageCount = item.volumeInfo.pageCount;
 
