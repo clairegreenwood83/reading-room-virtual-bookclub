@@ -59,12 +59,12 @@ const Modal=({show,item,onClose})=>{
                             <h2><strong>Publish Date: </strong><em>{item.volumeInfo.publishedDate}</em></h2>
                             <h2><strong>Category: </strong><em>{category}</em></h2>
                             <h2><strong>Page Count: </strong><em>{pageCount}</em></h2>
-                            <a href={item.volumeInfo.previewLink} target="_blank" rel="noreferrer noopener"><button className="infobtn">More</button></a>
+                            <a href={item.volumeInfo.previewLink} target="_blank" rel="noreferrer noopener"><button className="infobtn">More <BsInfoCircle /></button></a>
                             <button className="favbtn" onClick={saveBook}>Add to <BsBookmarkHeart /></button>
                             {
                                 read === false ? 
                                 <></> : 
-                                <button className="readNow"><a href="/reader" >Read Now</a></button>
+                                <a href="/reader" ><button className="readNow">Read Now <BiBookOpen /></button></a>
                             }
                         </div>
                     </div>
