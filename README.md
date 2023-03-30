@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/clairegreenwood83/reading-room-virtual-bookclub">
-    <img src="./src/components/Images/ReadingRoom.png" alt="Logo" width="80" height="80">
+    <img src="./src/components/Images/Logo2.png" alt="Logo" width="90" height="90">
   </a>
 
 # ReadingRoom
@@ -107,7 +107,7 @@ This is an example of how to list things you need to use the software and how to
 ### Executing program
 
 ```
-npm i
+npm start
 ```
 
 ## Usage
