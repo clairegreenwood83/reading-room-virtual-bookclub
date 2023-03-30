@@ -14,6 +14,8 @@ function BookCard(props) {
     if (destin === currStatus) {
       console.log("Already in category!");
       return;
+    } else if (destin === "") {
+      return;
     }
 
     let obooks = JSON.parse(localStorage.getItem(currStatus));
@@ -30,7 +32,8 @@ function BookCard(props) {
 
     localStorage.setItem(currStatus, JSON.stringify(newoBookList));
     localStorage.setItem(destin, JSON.stringify([...nbooks, movingB]));
-  };
+    event.target.value = "";
+  }
 
   const removeBook = () => {
     let books = JSON.parse(localStorage.getItem(currStatus));
@@ -40,6 +43,7 @@ function BookCard(props) {
 
   return (
     <div>
+
       <div className="mycard" key={id}>
         <img alt="book cover" src={image} />
         <div className="bottom">

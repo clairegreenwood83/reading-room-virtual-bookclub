@@ -25,7 +25,6 @@ function MyLibrary() {
     }, 500);
 
     return () => {
-      console.log(`clearing interval`);
       clearInterval(interval);
     };
   }, []);

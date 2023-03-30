@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lato:ital,wght@1,100;1,300;1,400&family=Orbitron&family=Roboto+Mono:wght@200&family=Roboto:ital,wght@1,100&display=swap');
+
 .cont {
     min-height: fit-content;
     width: 100vw; 
@@ -102,12 +104,24 @@
 
   .lead {
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 200;
+    font-size: 1.4rem;
+    font-weight: 230;
+    font-family: 'Roboto Mono', monospace;
+
+
+  }
+
+  .auth-lead {
+    font-weight: 900;
+    line-height: 3;
   }
 
   .display-4 {
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    color: black;
+    line-height: 4;
 
   }
+
+
