@@ -8,7 +8,7 @@ import "react-multi-carousel/lib/styles.css";
 
 function MyLibrary() {
   const [books, setBooks] = useState(
-    JSON.parse(localStorage?.getItem("myLibrary"))
+    JSON.parse(localStorage?.getItem("myLibrary")) || []
   );
   const [currentlyReading, setCurrentlyReading] = useState(
     JSON.parse(localStorage.getItem("currentlyReading")) || []
@@ -17,11 +17,21 @@ function MyLibrary() {
     JSON.parse(localStorage.getItem("previouslyRead")) || []
   );
 
+  function check (shelf) {
+    if (!localStorage.getItem(shelf)) {
+      localStorage.setItem(shelf, JSON.stringify([]));
+    }
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
+      check("myLibrary");
       setBooks(JSON.parse(localStorage.getItem("myLibrary")));
+      check("currentlyReading");
       setCurrentlyReading(JSON.parse(localStorage.getItem("currentlyReading")));
+      check("previouslyRead");
       setPreviouslyRead(JSON.parse(localStorage.getItem("previouslyRead")));
+
     }, 500);
 
     return () => {
