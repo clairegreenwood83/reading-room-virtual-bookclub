@@ -53,7 +53,7 @@ function MyLibrary() {
     <div className="bg myLib">
       <h1>My Library</h1>
       <Container>
-        <Row className="favourites mb-3" style={{ "overflow-x": "auto" }}>
+        <Row className="favourites mb-3" style={{ overflowX: "auto" }}>
           <h3>Favourites</h3>
           <Carousel responsive={responsive}>
             {books?.map((book) => (

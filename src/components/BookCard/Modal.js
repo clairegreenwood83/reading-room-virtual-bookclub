@@ -15,10 +15,8 @@ const Modal=({show,item,onClose})=>{
     let pageCount = item.volumeInfo.pageCount;
 
     if (item.volumeInfo.title.includes("Dracula")) {
-        console.log('true');
         read = true;
     } else {
-        console.log('false');
         read = false;
     }
 
