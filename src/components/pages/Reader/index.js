@@ -22,10 +22,10 @@ const Reader = () => {
         <h1>Reader</h1> 
         <div className="viewer"> 
           <ReactReader
-            title="Alice"
+            title="Dracula"
             location={location}
             locationChanged={locationChanged}
-            url="/Black-Beauty-by-Anna-Sewell-version.epub"
+            url="/Dracula.epub"
           />
         </div>   
       </div>

@@ -1,8 +1,9 @@
-// import react from 'react';
+import React, { useEffect } from 'react';
 import {BsBookmarkHeart} from "react-icons/bs";
 import "./BookCard_Modal.css";
 
 const Modal=({show,item,onClose})=>{
+    let read = false;
     if(!show)
     {
         return null;
@@ -11,17 +12,26 @@ const Modal=({show,item,onClose})=>{
     let category = item.volumeInfo.categories;
     let pageCount = item.volumeInfo.pageCount;
 
+    if (item.volumeInfo.title.includes("Dracula")) {
+        console.log('true');
+        read = true;
+    } else {
+        console.log('false');
+        read = false;
+    }
+
     if(!category){
-        category = "N.A."
+        category = "N/A."
     }
 
     if(!pageCount){
-        pageCount = "N.A."
+        pageCount = "N/A."
     }
 
     const saveBook = (e) => {
         e.preventDefault();
         let arr = JSON.parse(localStorage.getItem("myLibrary"));
+
         if (!arr) {
             arr = [];
         }
@@ -50,8 +60,12 @@ const Modal=({show,item,onClose})=>{
                             <h2><strong>Category: </strong><em>{category}</em></h2>
                             <h2><strong>Page Count: </strong><em>{pageCount}</em></h2>
                             <a href={item.volumeInfo.previewLink} target="_blank" rel="noreferrer noopener"><button className="infobtn">More</button></a>
-                            <a href=""><button className="favbtn" onClick={saveBook}>Add to <BsBookmarkHeart /></button></a>
-                            <a href=""><button className="readNow">Read Now</button></a>
+                            <button className="favbtn" onClick={saveBook}>Add to <BsBookmarkHeart /></button>
+                            {
+                                read === false ? 
+                                <></> : 
+                                <button className="readNow"><a href="/reader" >Read Now</a></button>
+                            }
                         </div>
                     </div>
                     <h4 className="descriptionbook">{item.volumeInfo.description}</h4>

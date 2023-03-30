@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import Comment from "../../../components/Comment";
 import axios from "axios";
 import "./style.css";
-// import { v4 as uuidv4 } from 'uuid';
 
-const Comments = (props) => {
+const Comments = () => {
   const [bookid, setBookid] = useState();
   const [comments, setComments] = useState();
   const [text, setText]  = useState("");
@@ -51,7 +50,6 @@ const Comments = (props) => {
   }
 
   const addComment = () => { 
-    // let token = uuidv4(); 
     var newData = JSON.stringify({"id": comments.length + 1,
       "user": user,
       "text": text,
