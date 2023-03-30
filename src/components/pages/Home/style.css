@@ -36,6 +36,7 @@
 }
 
 .bg-main .btn{
+    width: 140px;
     background-color:rgba(190, 78, 78, 0.664);
     border-color: rgb(152, 78, 78);
 }

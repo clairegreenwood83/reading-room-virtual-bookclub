@@ -23,6 +23,7 @@
     "react-icons": "^4.8.0",
     "react-multi-carousel": "^2.8.2",
     "react-reader": "^1.2.1",
+    "react-render": "^4.0.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.9",

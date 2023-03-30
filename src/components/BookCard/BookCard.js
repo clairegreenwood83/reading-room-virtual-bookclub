@@ -1,5 +1,5 @@
 import React from "react";
-import "./BookCard.css";
+import "./BookCard_Simple.css";
 
 function BookCard(props) {
   if (!props) {
