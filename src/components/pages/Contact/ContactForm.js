@@ -12,7 +12,7 @@ function ContactForm() {
       <div className="rowcf">
         <h4>We'd love to hear from you!</h4>
       </div>
-      <div className="row input-container">
+      <div className="rowcf input-container">
         <div className="col-xs-12">
           <div className="styled-input wide">
             <label htmlFor="email"></label>

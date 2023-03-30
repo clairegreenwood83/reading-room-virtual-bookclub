@@ -5,6 +5,7 @@ import "./MyLibrary.css";
 import BookCard from "../../BookCard/BookCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Collapse } from "bootstrap";
 
 function MyLibrary() {
   const [books, setBooks] = useState(
@@ -67,7 +68,7 @@ function MyLibrary() {
           <h3>Favourites</h3>
           <Carousel responsive={responsive}>
             {books?.map((book) => (
-              <div key={book?.id}>
+              <Col key={book?.id}>
                 <BookCard
                   id={book?.id}
                   currStatus={"myLibrary"}
@@ -75,7 +76,7 @@ function MyLibrary() {
                   image={book?.imageLinks.thumbnail}
                   author={book?.authors[0]}
                 />
-              </div>
+              </Col>
             ))}
           </Carousel>
         </Row>

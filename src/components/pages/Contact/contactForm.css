@@ -60,7 +60,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 }
 
 .styled-input.wide { 
-    width: 650px;
+    width: 40vw;
     max-width: 100%;
 }
 
@@ -68,6 +68,7 @@ input,
 textarea {
     padding: 30px;
     border: 0;
+    min-width: 200px;
     width: 100%;
     font-size: 1rem;
     background-color: #2d2d2d;
@@ -101,8 +102,8 @@ textarea {
 .submit-btn {
     padding: 7px 35px;
     border-radius: 60px;
-    max-width: 97%;
-    min-width: 120px;
+    width: 100%;
+    min-width:120px;
     display: inline-block;
     background-color: #9e9e9e;
     color: white;
