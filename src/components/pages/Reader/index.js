@@ -17,7 +17,7 @@ const Reader = () => {
 
   return (
  
-    <div className="cotr py-4 bg">
+    <div className="cotr py-4 bg-reader">
       <div className="mx-auto">
         <h1>Reader</h1> 
         <div className="viewer"> 

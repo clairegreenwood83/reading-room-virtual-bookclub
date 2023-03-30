@@ -10,8 +10,8 @@
     flex-direction: column;
 }
 
-.bg {
-    background-color: rgb(137, 192, 174);
+.bg-reader {
+    background-color: rgb(38, 116, 113);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
