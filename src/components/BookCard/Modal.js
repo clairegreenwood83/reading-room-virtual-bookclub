@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {BsBookmarkHeart} from "react-icons/bs";
 import {BsInfoCircle} from "react-icons/bs";
 import {BiBookOpen} from "react-icons/bi";
@@ -36,7 +36,7 @@ const Modal=({show,item,onClose})=>{
             arr = [];
         }
 
-        if(arr.filter(value=> value.title==item.volumeInfo.title).length > 0) {
+        if(arr.filter(value=> value.title===item.volumeInfo.title).length > 0) {
             console.log("Already in library!");
         }          
         else {

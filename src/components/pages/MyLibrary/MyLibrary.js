@@ -5,7 +5,6 @@ import "./MyLibrary.css";
 import BookCard from "../../BookCard/BookCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Collapse } from "bootstrap";
 
 function MyLibrary() {
   const [books, setBooks] = useState(
