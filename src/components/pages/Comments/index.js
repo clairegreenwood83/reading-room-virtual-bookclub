@@ -16,7 +16,7 @@ const Comments = () => {
     const getComments = async () => { 
       try { 
         // const res = await axios.get("http://localhost:3004/comments", {params: { bookid: props.id}});
-        const res = await axios.get("http://localhost:3004/comments");
+        const res = await axios.get("https://my-json-server.typicode.com/heyilll/demodb/comments");
         setComments(res.data);
       } catch (err) {
         console.log(err); 
@@ -55,7 +55,7 @@ const Comments = () => {
       "text": text,
       "bookid": bookid});
 
-    axios.post("http://localhost:3004/comments", newData, {
+    axios.post("https://my-json-server.typicode.com/heyilll/demodb/comments", newData, {
         headers: {
           "Content-Type": "application/json; charset=UTF-8"
         }
