@@ -8,7 +8,7 @@ const Search = () => {
   const [search, setSearch] = useState("");
   const [bookData, setData] = useState([]);
   const searchBook = (evt) => {
-    if (evt.key === "Enter") {
+    if (evt.key === "Enter" || !evt.key) {
       axios
         .get(
           "https://www.googleapis.com/books/v1/volumes?q=" +
@@ -18,7 +18,6 @@ const Search = () => {
         )
         .then((res) => {
           setData(res.data.items);
-        //   console.log(res);
         })
         .catch((err) => console.log(err));
     }
@@ -46,7 +45,7 @@ const Search = () => {
               onChange={(e) => setSearch(e.target.value)}
               onKeyPress={searchBook}
             />
-            <button>
+            <button  onClick={searchBook}>
               <i className="fas fa-search"></i>
             </button>
           </div>
