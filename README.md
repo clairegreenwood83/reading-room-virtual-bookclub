@@ -19,7 +19,7 @@ We wanted a one-stop shop where we could manage our book library, search for boo
     <a href="https://github.com/clairegreenwood83/reading-room-virtual-bookclub"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://soft-bavarois-cd7818.netlify.app/">View Site</a>
+    <a href="https://reading-room-library.netlify.app/">View Site</a>
     ·
     <a href="https://github.com/clairegreenwood83/reading-room-virtual-bookclub/issues">Report Bug</a>
     ·
@@ -111,7 +111,7 @@ npm start
 ```
 
 ## Usage
-The site is deployed at:  https://soft-bavarois-cd7818.netlify.app/. 
+The site is deployed at:  https://reading-room-library.netlify.app/. 
 
 Please click the image for instructions on how to use the site. Thank you!
 
